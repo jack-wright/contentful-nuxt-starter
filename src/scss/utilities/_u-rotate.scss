@@ -1,0 +1,17 @@
+.u-rotate {
+    &--eigth {
+        @include rotate(45deg)
+    }
+
+    &--quarter {
+        @include rotate(90deg)
+    }
+
+    &--half {
+        @include rotate(180deg)
+    }
+
+    &--full {
+        @include rotate(360deg)
+    }
+}

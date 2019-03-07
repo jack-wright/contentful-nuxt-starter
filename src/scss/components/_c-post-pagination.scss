@@ -1,0 +1,23 @@
+.c-post-pagination {
+    $this: &;
+    font-size: $font-size-sm;
+    text-align: center;
+
+    &__item {
+        font-weight: bold;
+        margin: 0 .5rem;
+
+        a {
+            @include link-text-color;
+
+            &#{$this}__item--disabled {
+                color: $c-grey-light;
+
+                &:hover {
+                    color: $c-grey-light;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

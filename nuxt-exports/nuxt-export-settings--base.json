@@ -1,0 +1,5 @@
+{
+    "skip-content": true,
+    "skip-roles": true,
+    "content-file": "./nuxt-imports/1-nuxt-contentful-content--base.json"
+}

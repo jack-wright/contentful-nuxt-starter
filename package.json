@@ -1,0 +1,73 @@
+{
+    "name": "nuxt-contentful-starter",
+    "version": "1.0.0",
+    "description": "Small Nuxt starter build",
+    "main": "index.js",
+    "scripts": {
+        "contentfulExport": "/bin/bash contentfulExport.sh",
+        "contentfulImport": "/bin/bash contentfulImport.sh",
+        "test": "jest --silent",
+        "test:coverage": "yarn test --coverage",
+        "test:watch": "yarn test --watch",
+        "watch": "nuxt",
+        "build": "nuxt build",
+        "generate": "nuxt generate && /bin/bash copyScript.sh",
+        "start": "nuxt start",
+        "lint": "eslint \"./**/*.{js,vue}\"",
+        "lint:fix": "eslint --fix \"./**/*.{js,vue}\"",
+        "lint:scss": "sass-lint \"./src/scss/**/*.scss\""
+    },
+    "author": "Breakthrough Media",
+    "license": "ISC",
+    "dependencies": {
+        "@contentful/rich-text-html-renderer": "^10.0.1",
+        "@nuxtjs/dotenv": "^1.3.0",
+        "@nuxtjs/google-tag-manager": "^2.1.0",
+        "@nuxtjs/pwa": "^2.6.0",
+        "@nuxtjs/sitemap": "^0.2.0",
+        "animated-scroll-to": "^1.2.2",
+        "axios": "^0.18.0",
+        "contentful": "^7.0.5",
+        "dayjs": "^1.7.7",
+        "modernizr": "^3.6.0",
+        "normalize-scss": "^7.0.1",
+        "nuxt": "^2.3.0",
+        "qs": "^6.6.0",
+        "simple-cookie-consent": "^0.1.8",
+        "svg-sprite-loader": "^4.1.3",
+        "vue-recaptcha": "^1.1.1",
+        "vue-social-sharing": "^2.3.3"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/plugin-transform-runtime": "^7.2.0",
+        "@babel/preset-env": "^7.3.1",
+        "@vue/test-utils": "^1.0.0-beta.28",
+        "babel-eslint": "^10.0.1",
+        "babel-jest": "^23.6.0",
+        "eslint": "^5.12.0",
+        "eslint-loader": "^2.1.1",
+        "eslint-plugin-vue": "^5.1.0",
+        "import-glob-loader": "^1.1.0",
+        "jest": "^23.6.0",
+        "node-sass": "^4.10.0",
+        "sass-lint": "^1.12.1",
+        "sass-loader": "^7.1.0",
+        "svg-sprite-loader": "^4.1.3",
+        "vue-jest": "^3.0.2",
+        "webfontloader": "^1.6.28"
+    },
+    "jest": {
+        "moduleFileExtensions": [
+            "js",
+            "json"
+        ],
+        "transform": {
+            "^.+\\.js$": "babel-jest"
+        },
+        "moduleNameMapper": {
+            "@/(.*)$": "<rootDir>/$1"
+        }
+    }
+}

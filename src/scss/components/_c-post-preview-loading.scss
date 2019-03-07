@@ -1,0 +1,13 @@
+.c-blog-post-preview {
+    &__title {
+        background: $c-loading;
+        height: 2.2rem;
+        margin: 0 0 1rem;
+    }
+
+    &__subtitle {
+        background: $c-loading;
+        height: 2.2rem;
+        width: 8rem;
+    }
+}

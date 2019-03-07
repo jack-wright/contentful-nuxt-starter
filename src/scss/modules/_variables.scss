@@ -1,0 +1,191 @@
+// Colors ----------------------------------------------------------------------
+
+// Site colors
+$c-green:                      #00B585                               !default;
+$c-black:                      #000000                               !default;
+$c-white:                      #FFFFFF                               !default;
+$c-grey-dark:                  #333333                               !default;
+$c-grey:                       #D0D0D0                               !default;
+$c-grey-light:                 #CCCCCC                               !default;
+$c-grey-lighter:               #EAEAEA                               !default;
+$c-red:                        #CC0000                               !default;
+$c-orange:                     #CD7106                               !default;
+
+// Main colors
+$c-theme:                      $c-grey-dark                            !default;
+$c-featured-section:           $c-theme                                !default;
+$c-success:                    $c-green                                !default;
+$c-warning:                    $c-orange                               !default;
+$c-danger:                     $c-red                                  !default;
+$c-loading:                    $c-grey-lighter                         !default;
+
+$c-image-background:           $c-loading                              !default;
+$c-video-background:           rgba($c-black, .15)                     !default;
+
+$c-box-shadow-light:           rgba($c-black, .5)                      !default;
+$c-box-shadow-std:             rgba($c-black, .25)                     !default;
+
+// Typography ------------------------------------------------------------------
+
+// Typefaces
+$text-typeface-primary:        'Open Sans', sans-serif                 !default;
+$text-typeface-secondary:      'Alegreya', serif                       !default;
+
+// Formatting
+$text-lineheight:              1.5                                     !default;
+
+// Colors
+$text-color-primary:           $c-grey-dark                            !default;
+$text-color-secondary:         $c-grey-dark                            !default;
+$text-color-light:             $c-white                                !default;
+
+
+
+// Links      ------------------------------------------------------------------
+
+$link-color-default:           $text-color-primary                     !default;
+$link-color-visited:           $link-color-default                     !default;
+$link-color-active:            $link-color-default                     !default;
+$link-color-hover:             darken($link-color-default, 5%)         !default;
+$link-color-focus:             $link-color-default                     !default;
+
+$link-decoration-default:      none                                    !default;
+$link-decoration-hover:        underline                               !default;
+
+
+
+// Typeography -----------------------------------------------------------------
+
+$spacer:                       1rem                                    !default;
+
+// Base
+$font-size-base:               1.6rem                                  !default;
+$font-size-lg:                 ($font-size-base * 1.25)                !default;
+$font-size-sm:                 ($font-size-base * .875)                !default;
+$font-size-xs:                 ($font-size-base * .8125)                  !default;
+
+$font-weight-light:            300                                     !default;
+$font-weight-normal:           400                                     !default;
+$font-weight-bold:             700                                     !default;
+
+$font-weight-base:             $font-weight-normal                     !default;
+$line-height-base:             1.5                                     !default;
+
+// Headings
+$h1-font-size:                 $font-size-base * 2.5                   !default;
+$h2-font-size:                 $font-size-base * 2                     !default;
+$h3-font-size:                 $font-size-base * 1.75                  !default;
+$h4-font-size:                 $font-size-base * 1.5                   !default;
+$h5-font-size:                 $font-size-base * 1.25                  !default;
+$h6-font-size:                 $font-size-base                         !default;
+
+$headings-margin-top:          1.5em                                   !default;
+$headings-margin-bottom:       ($spacer / 2)                           !default;
+$headings-font-family:         inherit                                 !default;
+$headings-font-weight:         800                                     !default;
+$headings-line-height:         1.2                                     !default;
+$headings-color:               inherit                                 !default;
+
+$post-title-link-color:        $text-color-primary                     !default;
+
+$display-size:                 6rem                                    !default;
+$display-weight:               300                                     !default;
+$display-line-height:          $headings-line-height                   !default;
+
+// Misc elements
+$small-font-size:              80%                                     !default;
+$blockquote-small-color:       $c-grey-dark                            !default;
+$blockquote-font-size:         ($font-size-base * 1.25)                !default;
+$hr-border-color:              rgba($c-black, .1)                      !default;
+$hr-border-width:              1px                                     !default;
+$hr-margin-y:                  $spacer                                 !default;
+$mark-padding:                 .2em                                    !default;
+$mark-bg:                      #fcf8e3                                 !default;
+
+
+
+// Layout ----------------------------------------------------------------------
+
+// Breakpoints
+$bp-small:                     576px                                   !default;
+$bp-medium:                    768px                                   !default;
+$bp-large:                     992px                                   !default;
+$bp-xlarge:                    1280px                                  !default;
+$bp-xxlarge:                   1600px                                  !default;
+
+// Wrapper widths
+$page-min-width:               33rem                                   !default;
+$page-padding-x:               2rem                                    !default;
+$page-max-width-medium:        66rem                                   !default;
+$page-max-width-large:         80rem                                   !default;
+$introduction-max-width:       50rem                                   !default;
+
+
+
+// Header ----------------------------------------------------------------------
+$header-color-background:      $c-theme                                !default;
+$header-color-hamburger:       $text-color-light                       !default;
+
+
+
+// Timings ---------------------------------------------------------------------
+$transition-std:  .15s                                                 !default;
+$transition-long: .25s                                                 !default;
+
+
+// Utility spacer class sizes --------------------------------------------------
+
+$u-spacer-sm-default:          1rem                                    !default;
+$u-spacer-sm-small-up:         1rem                                    !default;
+$u-spacer-sm-medium-up:        1rem                                    !default;
+
+$u-spacer-std-default:         2rem                                    !default;
+$u-spacer-std-small-up:        2rem                                    !default;
+$u-spacer-std-medium-up:       2rem                                    !default;
+
+$u-spacer-lg-default:          3rem                                    !default;
+$u-spacer-lg-small-up:         3rem                                    !default;
+$u-spacer-lg-medium-up:        3rem                                    !default;
+
+$u-spacer-xl-default:          5rem                                    !default;
+$u-spacer-xl-small-up:         5rem                                    !default;
+$u-spacer-xl-medium-up:        5rem                                    !default;
+
+
+
+// Buttons ---------------------------------------------------------------------
+
+$button-color-primary:         $c-theme                                !default;
+
+
+
+// Grid    ---------------------------------------------------------------------
+
+$grid-gap:                     3.6rem                                  !default;
+
+
+
+// Page builder ----------------------------------------------------------------
+
+$page-builder-spacer-xs:       $u-spacer-std-default                   !default;
+$page-builder-spacer-lg:       $u-spacer-xl-default                    !default;
+
+// Page builder - Call to action
+$c-cta-background-color:       $c-theme                                !default;
+$c-cta-text-color:             $text-color-light                       !default;
+$c-cta-text-size-xs:           6vw                                     !default;
+$c-cta-text-size-sm:           5vw                                     !default;
+$c-cta-text-size-base:         $h1-font-size                           !default;
+$c-cta-font-weight:            $font-weight-bold                       !default;
+
+$c-cta-button-color:           $c-white                                !default;
+$c-cta-button-text-color:      $text-color-light                       !default;
+$c-cta-button-hover-color:     $c-white                                !default;
+$c-cta-button-text-hover-color:    $text-color-primary                 !default;
+$c-cta-button-border-width:    .3rem                                   !default;
+$c-cta-button-margin-sm:       1.6rem 0 0                              !default;
+$c-cta-button-margin-base:     2.4rem 0 0                              !default;
+
+// Dividing line
+$page-builder-divider-height:  .2rem                                   !default;
+$page-builder-divider-color:   $c-featured-section                     !default;

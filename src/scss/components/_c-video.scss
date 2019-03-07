@@ -1,0 +1,19 @@
+.c-video {
+    overflow: hidden;
+
+    &--has-shade {
+        position: relative;
+
+        &::before {
+            @include square(100%);
+
+            background-color: $c-video-background;
+            content: '';
+            position: absolute;
+        }
+    }
+
+    &__video {
+        width: 100%;
+    }
+}

@@ -1,0 +1,8 @@
+.u-error {
+    color: $c-danger;
+    display: inline-block;
+
+    &--input {
+        border-color: $c-danger;
+    }
+}

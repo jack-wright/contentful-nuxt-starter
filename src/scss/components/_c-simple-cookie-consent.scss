@@ -1,0 +1,114 @@
+.c-simple-cookie-consent {
+    $this: &;
+
+    background-color: $c-black;
+    bottom: 0;
+    color: $c-white;
+    font-family: $text-typeface-primary;
+    font-size: $font-size-base;
+    left: 0;
+    line-height: 1.4;
+    position: fixed;
+    transform: translateZ(0);
+    width: 100%;
+    z-index: 1000;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 140rem;
+        padding: 2rem 0;
+        width: 100%;
+
+        @include breakpoint(769px) {
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+
+    &__policy {
+        color: $c-white;
+        flex: 2;
+        margin: 0;
+        padding: 0 2rem;
+    }
+
+    &__buttons-wrap {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        width: 100%;
+
+        @include breakpoint($bp-small) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include breakpoint(769px) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__button {
+        background: none;
+        background-color: $c-white;
+        border: 0;
+        color: $c-black;
+        cursor: pointer;
+        display: block;
+        font-family: $text-typeface-primary;
+        font-size: $font-size-lg;
+        font-weight: bold;
+        margin: 2rem 2rem 0;
+        padding: 0;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        width: auto;
+
+        @include breakpoint($bp-small) {
+            max-width: 20rem;
+            width: calc(50% - 4rem);
+        }
+
+        @include breakpoint(769px) {
+            margin: 0 2rem;
+        }
+
+        &:hover {
+            background-color: darken($c-white, 5%);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__button-text {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    &__accessible-text {
+        height: .1rem;
+        overflow: hidden;
+        position: absolute;
+        top: -1rem;
+        width: .1rem;
+    }
+
+    &--has-additional {
+        #{$this}__policy {
+            flex: .8;
+
+            @include breakpoint($bp-xlarge) {
+                flex: 1.5;
+            }
+        }
+
+        #{$this}__button {
+            max-width: none;
+        }
+    }
+}

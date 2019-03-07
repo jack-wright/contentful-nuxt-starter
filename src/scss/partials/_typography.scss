@@ -1,0 +1,139 @@
+html {
+    color: $text-color-primary;
+    font-family: $text-typeface-primary;
+    font-size: 62.5%;
+    line-height: $text-lineheight;
+}
+
+body {
+    font-size: 1.4em;
+
+    @include breakpoint($bp-small) {
+        font-size: 1.4em;
+    }
+
+    @include breakpoint($bp-medium) {
+        font-size: 1.6em;
+    }
+
+}
+
+@media print {
+    body {
+        font-size: 1.6em;
+    }
+}
+
+a {
+    color: $link-color-default;
+    text-decoration: $link-decoration-default;
+
+    &:visited {
+        color: $link-color-visited;
+    }
+
+    &:active {
+        color: $link-color-active;
+    }
+
+    &:focus {
+        color: $link-color-focus;
+        text-decoration: $link-decoration-hover;
+    }
+
+    &:hover {
+        color: $link-color-hover;
+        text-decoration: $link-decoration-hover;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.t-heading-1,
+.t-heading-2,
+.t-heading-3,
+.t-heading-4,
+.t-heading-5,
+.t-heading-6 {
+    color: $headings-color;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    margin-bottom: $headings-margin-bottom;
+    margin-top: $headings-margin-top;
+}
+
+h1,
+.t-heading-1 {
+    font-size: $h1-font-size;
+}
+
+h2,
+.t-heading-2 {
+    font-size: $h2-font-size;
+}
+
+h3,
+.t-heading-3 {
+    font-size: $h3-font-size;
+}
+
+h4,
+.t-heading-4 {
+    font-size: $h4-font-size;
+}
+
+h5,
+.t-heading-5 {
+    font-size: $h5-font-size;
+}
+
+h6,
+.t-heading-6 {
+    font-size: $h6-font-size;
+}
+
+.t-display {
+    font-size: $display-size;
+    font-weight: $display-weight;
+    line-height: $display-line-height;
+}
+
+hr,
+.t-hr {
+    border: 0;
+    border-top: $hr-border-width solid $hr-border-color;
+    margin-bottom: $hr-margin-y;
+    margin-top: $hr-margin-y;
+}
+
+small,
+.t-small {
+    font-size: $small-font-size;
+    font-weight: $font-weight-normal;
+}
+
+mark,
+.t-mark {
+    background-color: $mark-bg;
+    padding: $mark-padding;
+}
+
+.t-blockquote {
+    font-size: $blockquote-font-size;
+    margin-bottom: $spacer;
+}
+
+.t-blockquote-footer {
+    color: $blockquote-small-color;
+    display: block;
+    font-size: 80%; // back to default font-size
+
+    &::before {
+        content: '\2014 \00A0'; // em dash, nbsp
+    }
+}

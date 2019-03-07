@@ -1,0 +1,35 @@
+.s-page {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-weight: $headings-font-weight;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .c-image {
+        margin: 1.5em 0;
+    }
+
+    blockquote {
+        p {
+            @extend .t-heading-1;
+            display: inline;
+
+            &::before {
+                content: '\201c';
+                margin-right: .5rem;
+            }
+
+            &::after {
+                content: '\201d';
+                margin-left: .5rem;
+            }
+        }
+    }
+}

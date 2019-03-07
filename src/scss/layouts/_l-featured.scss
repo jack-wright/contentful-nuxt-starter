@@ -1,0 +1,32 @@
+.l-featured {
+    &__container {
+        display: grid;
+        grid-gap: 2rem;
+
+        &--columns {
+            &-2 {
+                @include breakpoint($bp-medium) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            &-3 {
+                @include breakpoint($bp-medium) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            &-4 {
+                @include breakpoint($bp-medium) {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+
+            &-5 {
+                @include breakpoint($bp-medium) {
+                    grid-template-columns: repeat(5, 1fr);
+                }
+            }
+        }
+    }
+}

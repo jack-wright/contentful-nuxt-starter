@@ -1,0 +1,9 @@
+.l-wrapper {
+    &--has-floating-header {
+        padding-top: 6rem;
+
+        @include breakpoint($bp-medium) {
+            padding-top: 7.1rem;
+        }
+    }
+}

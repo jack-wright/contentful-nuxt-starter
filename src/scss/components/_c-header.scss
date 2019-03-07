@@ -1,0 +1,90 @@
+.c-header {
+    background-color: $header-color-background;
+    display: flex;
+    padding: 1.5rem $u-spacer-std-default;
+
+    &--transparent {
+        background-color: transparent;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+
+        @include breakpoint($bp-medium) {
+            height: auto;
+        }
+    }
+
+    &--floating {
+        @include breakpoint($bp-medium) {
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+    }
+
+    .c-nav {
+        opacity: 0;
+        transition: opacity .1s ease-in-out;
+
+        @include breakpoint($bp-medium) {
+            opacity: 1;
+        }
+    }
+
+    .menu-is-open & {
+        .c-nav {
+            align-items: center;
+            background: $header-color-background;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            left: 0;
+            opacity: 1;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 10;
+
+            @include breakpoint($bp-medium) {
+                background: none;
+                position: relative;
+            }
+
+            &__menu {
+                display: block;
+                font-size: $h2-font-size;
+                text-align: center;
+
+                @include breakpoint($bp-medium) {
+                    display: flex;
+                    margin: 0;
+                }
+            }
+
+            &__item {
+                margin-bottom: 2rem;
+
+                @include breakpoint($bp-medium) {
+                    margin-bottom: 0;
+                }
+            }
+
+            &__link {
+                color: $text-color-light;
+            }
+
+            &__brand {
+                z-index: 11;
+            }
+        }
+    }
+}
+
+@media print {
+    .c-header {
+        display: none;
+    }
+}

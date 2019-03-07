@@ -1,0 +1,45 @@
+.c-form {
+    &__field {
+        display: block;
+        font-family: $text-typeface-primary;
+        font-size: $font-size-sm;
+        outline-color: $c-theme;
+        padding: 1rem;
+        width: 100%;
+
+        &--textarea,
+        &--input {
+            border: .1rem solid $c-grey;
+            transition: border-color ease-in-out $transition-std;
+
+            &:focus {
+                border-color: $c-theme;
+            }
+        }
+
+        &--textarea {
+            resize: none;
+        }
+
+        &--recaptcha {
+            padding: 0;
+        }
+    }
+
+    &__fieldset {
+        border: 0;
+        margin-bottom: $u-spacer-std-default;
+        padding: 0;
+    }
+
+    &__label {
+        display: block;
+        font-size: $font-size-sm;
+        font-weight: bold;
+        margin-bottom: .5rem;
+    }
+
+    &__response {
+        margin-top: 2rem;
+    }
+}

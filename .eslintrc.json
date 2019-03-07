@@ -1,0 +1,82 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/recommended"
+    ],
+    "parserOptions": {
+        "parser": "babel-eslint",
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "plugins": [
+        "vue"
+    ],
+    "rules": {
+        "vue/html-indent": [
+            "error",
+            4,
+            {}
+        ],
+        "vue/max-attributes-per-line": [
+            "error",
+            {
+                "multiline": {
+                    "max": 1,
+                    "allowFirstLine": false
+                }
+            }
+        ],
+        "vue/mustache-interpolation-spacing": [
+            "error",
+            "never"
+        ],
+        "vue/html-closing-bracket-newline": [
+            "error",
+            {
+                "multiline": "never"
+            }
+        ],
+        "vue/html-self-closing": [
+            "error",
+            {
+                "html": {
+                    "void": "always",
+                    "normal": "never"
+                }
+            }
+        ],
+        "vue/attribute-hyphenation": [
+            "error",
+            "never"
+        ],
+        "no-console": "off",
+        "object-curly-spacing": [
+            "error",
+            "never"
+        ],
+        "array-bracket-spacing": [
+            "error",
+            "never"
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "no-mixed-spaces-and-tabs": "error",
+        "no-useless-escape": "off",
+        "no-unused-vars": "off",
+        "quotes": ["error", "single"]
+    },
+    "globals": {
+        "YT": true,
+        "describe": true,
+        "it": true,
+        "expect": true,
+        "Modernizr": true
+    }
+}

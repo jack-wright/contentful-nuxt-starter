@@ -1,0 +1,36 @@
+%u-badge {
+    border-radius: 1rem;
+    display: inline-block;
+    font-size: $font-size-sm;
+    padding: .3rem .8rem;
+}
+
+
+.u-badge--primary {
+    @extend %u-badge;
+    @include text-contrast($c-theme);
+
+    background: $c-theme;
+
+    &:visited {
+        @include text-contrast($c-theme);
+    }
+}
+
+
+.u-badge--secondary {
+    @extend %u-badge;
+    @include text-contrast($c-grey);
+
+    background: $c-grey;
+
+    &:visited {
+        @include text-contrast($c-grey);
+    }
+}
+
+.u-badge--clear {
+    @extend %u-badge;
+
+    box-shadow: 0 0 .1rem $c-grey-dark;
+}

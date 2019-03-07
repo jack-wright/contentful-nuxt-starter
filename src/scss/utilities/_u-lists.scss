@@ -1,0 +1,13 @@
+.u-list {
+    &--unstyled {
+        @include list-unstyled;
+    }
+
+    &--inline {
+        @include list-inline;
+    }
+
+    &--inline-floated {
+        @include list-inline-floated;
+    }
+}

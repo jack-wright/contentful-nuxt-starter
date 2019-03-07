@@ -1,0 +1,17 @@
+.l-page-builder {
+    &__module {
+        margin: 0 0 $page-builder-spacer-xs;
+
+        &-title {
+            margin: 0 0 $u-spacer-std-default;
+        }
+
+        @include breakpoint($bp-large) {
+            margin: 0 0 $page-builder-spacer-lg;
+        }
+
+        &--no-margin {
+            margin-bottom: 0;
+        }
+    }
+}

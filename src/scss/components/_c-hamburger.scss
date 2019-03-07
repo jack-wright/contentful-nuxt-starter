@@ -1,0 +1,58 @@
+.c-hamburger {
+    cursor: pointer;
+    height: 3rem;
+    position: relative;
+    width: 3rem;
+    z-index: 11;
+
+    @include breakpoint($bp-medium) {
+        display: none;
+    }
+
+    &__bar {
+        background: $header-color-hamburger;
+        display: block;
+        height: .4rem;
+        position: absolute;
+        right: 0;
+        top: calc(50% - .2rem);
+        transition: background .1s;
+        width: 100%;
+
+        &::after,
+        &::before {
+            background: $header-color-hamburger;
+            content: '';
+            display: block;
+            height: .4rem;
+            position: absolute;
+            width: 100%;
+        }
+
+        &::before {
+            top: -1rem;
+            transition: top .3s, transform .3s;
+        }
+
+        &::after {
+            bottom: -1rem;
+            transition: bottom .3s, transform .3s;
+        }
+
+        .menu-is-open & {
+            background: none;
+
+            &::before {
+                opacity: 1;
+                top: 0;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                bottom: 0;
+                opacity: 1;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.c-footer {
+    background-color: $c-theme;
+    padding: $u-spacer-std-default;
+
+    @include breakpoint($bp-medium) {
+        display: flex;
+    }
+
+    &__address {
+        color: $c-white;
+
+        @include breakpoint($bp-medium) {
+            font-size: $font-size-sm;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    &__email-address {
+        color: $text-color-light;
+        display: block;
+
+        @include breakpoint($bp-medium) {
+            font-size: $font-size-sm;
+        }
+
+        &:hover {
+            color: darken($text-color-light, 15%);
+            text-decoration: none;
+        }
+    }
+
+    .c-nav {
+        display: block;
+        margin-right: 6.4rem;
+        margin-top: 1.6rem;
+
+        @include breakpoint($bp-medium) {
+            margin-top: 0;
+        }
+
+        &__brand {
+            margin: 0 6.4rem 0 0;
+        }
+
+        &__menu {
+            display: block;
+            margin: 0 0 $u-spacer-sm-small-up;
+
+            &--legal {
+                @include breakpoint($bp-medium) {
+                    font-size: $font-size-sm;
+                }
+            }
+        }
+
+        &__item {
+            margin: 0;
+        }
+
+    }
+}
+
+@media print {
+    .c-footer {
+        display: none;
+    }
+}

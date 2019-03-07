@@ -1,0 +1,31 @@
+rules:
+    indentation:
+        - 2
+        - size: 4
+    class-name-format:
+        - 2
+        - convention: hyphenatedbem
+    nesting-depth:
+        - 2
+        - max-depth: 4
+    space-after-colon: 2
+    space-after-comma: 2
+    zero-unit: 2
+    property-sort-order:
+        - 2
+        - order: 'alphabetical'
+    property-units:
+        - 2
+        - global: ['em', 'rem', '%', 'ms', 's', 'vh']
+    hex-length:
+        - style: long
+    hex-notation:
+        - style: uppercase
+    no-transition-all:
+        - false
+    no-vendor-prefixes:
+        - false
+    no-url-domains:
+        - false
+    no-url-protocols:
+        - false

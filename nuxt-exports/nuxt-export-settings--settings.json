@@ -1,0 +1,7 @@
+{
+    "query-entries": [
+        "content_type=settings"
+    ],
+    "content-only": true,
+    "content-file": "./nuxt-imports/4-nuxt-contentful-content--settings.json"
+}

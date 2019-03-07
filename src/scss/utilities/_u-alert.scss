@@ -1,0 +1,31 @@
+.u-alert {
+    border: .2rem solid;
+    padding: 1rem 4rem 1rem 1rem;
+    position: relative;
+
+    &--error {
+        border-color: $c-danger;
+    }
+
+    &--success {
+        border-color: $c-success;
+    }
+
+    &__close {
+        background: none;
+        border: 0;
+        cursor: pointer;
+        font-size: $h2-font-size;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &--success {
+            color: $c-green;
+        }
+
+        &--error {
+            color: $c-red;
+        }
+    }
+}

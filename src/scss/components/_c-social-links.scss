@@ -1,0 +1,13 @@
+.c-social-links {
+    &--light {
+        .u-social-link {
+            svg {
+                fill: $c-white;
+
+                &:hover {
+                    fill: darken($c-white, 30%);
+                }
+            }
+        }
+    }
+}

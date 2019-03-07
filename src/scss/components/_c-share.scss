@@ -1,0 +1,41 @@
+.c-share {
+    display: inline-flex;
+    margin-bottom: 1rem;
+
+    @include breakpoint($bp-medium) {
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        font-size: $font-size-sm;
+        font-weight: bold;
+        line-height: 2.5rem;
+        margin: 0 1rem 0 0;
+    }
+
+    &__links {
+        font-size: 0;
+    }
+
+    span {
+        display: inline-block;
+        height: 100%;
+
+        svg {
+            cursor: pointer;
+            fill: $c-black;
+        }
+
+        &:last-child {
+            svg {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media print {
+    .c-share {
+        display: none;
+    }
+}

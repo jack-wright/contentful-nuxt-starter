@@ -1,0 +1,144 @@
+.c-contact-popup {
+    bottom: 0;
+    max-width: 35rem;
+    position: fixed;
+    right: 1rem;
+    text-align: right;
+    width: calc(100% - 2rem);
+    z-index: 9;
+
+    @include breakpoint(375px) {
+        width: 100%;
+    }
+
+    @include breakpoint($bp-medium) {
+        right: 2rem;
+    }
+
+    @include breakpoint($bp-large) {
+        right: 4rem;
+    }
+
+    &__button {
+        align-items: center;
+        background-color: $c-theme;
+        border-radius: 50%;
+        box-shadow: 0 0 3rem 0 $c-box-shadow-std;
+        cursor: pointer;
+        display: flex;
+        height: 5rem;
+        justify-content: center;
+        margin: 0 0 1rem auto;
+        transition: background-color .15s ease-in-out;
+        width: 5rem;
+
+        @include breakpoint($bp-medium) {
+            height: 6rem;
+            width: 6rem;
+        }
+
+        &:hover {
+            @include breakpoint($bp-large) {
+                background-color: lighten($c-theme, 20%);
+            }
+        }
+
+        &-icon {
+            fill: $c-white;
+            height: 2.5rem;
+            width: 2.5rem;
+
+            @include breakpoint($bp-medium) {
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+    }
+
+    &__tab {
+        background-color: $c-theme;
+        color: $c-white;
+        cursor: pointer;
+        display: inline-block;
+        font-size: $font-size-sm;
+        margin-top: 1rem;
+        min-width: 8em;
+        padding: .5rem 2rem;
+        position: relative;
+        text-align: center;
+        transition: background-color .15s ease-in-out;
+
+        .c-contact-popup--is-open & {
+            color: transparent;
+        }
+
+        &-icon {
+            bottom: 0;
+            fill: $c-white;
+            height: 1.5rem;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 1.5rem;
+        }
+
+        &:hover {
+            @include breakpoint($bp-large) {
+                background-color: lighten($c-theme, 20%);
+            }
+        }
+    }
+
+    &__popup {
+        background-color: $c-white;
+        box-shadow: 0 0 4rem 0 $c-box-shadow-light;
+        margin-bottom: 1rem;
+        text-align: left;
+        width: 100%;
+
+        @include breakpoint($bp-medium) {
+            margin-bottom: 2rem;
+        }
+
+        &-header {
+            background-color: $c-grey-dark;
+            color: $c-white;
+            font-size: $font-size-lg;
+            padding: 1rem 2rem;
+
+            @include breakpoint($bp-medium) {
+                padding: 1.5rem 2rem;
+            }
+        }
+
+        &-contents {
+            padding: $u-spacer-sm-default;
+
+            @include breakpoint(375px) {
+                padding: 1.5rem;
+            }
+
+            @include breakpoint($bp-medium) {
+                padding: $u-spacer-std-default;
+            }
+
+            .c-form {
+                &__fieldset {
+                    margin-bottom: $u-spacer-sm-default;
+
+                    @include breakpoint($bp-medium) {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media print {
+    .c-contact-popup {
+        display: none;
+    }
+}

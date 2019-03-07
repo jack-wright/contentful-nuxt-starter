@@ -1,0 +1,52 @@
+.u-button {
+    background: none;
+    border: .2rem solid $button-color-primary;
+    color: $text-color-primary;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $text-typeface-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        background: $button-color-primary;
+        color: $text-color-light;
+        text-decoration: none;
+    }
+
+    &--disabled {
+        border-color: $c-grey-light;
+        color: $c-grey-light;
+        cursor: not-allowed;
+
+        &:hover {
+            background: none;
+            color: $c-grey-light;
+        }
+    }
+
+    &--cta {
+        border-color: $c-cta-button-color;
+        border-width: $c-cta-button-border-width;
+        color: $c-cta-text-color;
+        margin: $c-cta-button-margin-sm;
+
+        @include breakpoint($bp-medium) {
+            font-size: $font-size-lg;
+            margin: $c-cta-button-margin-base;
+        }
+
+        &:visited {
+            color: $c-cta-text-color;
+        }
+
+        &:hover {
+            background-color: $c-cta-button-hover-color;
+            color: $c-cta-button-text-hover-color;
+        }
+    }
+}

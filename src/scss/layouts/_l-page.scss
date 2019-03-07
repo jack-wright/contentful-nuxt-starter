@@ -1,0 +1,30 @@
+.l-page {
+    &--contact {
+        display: block;
+        margin-bottom: 2rem;
+        width: 100%;
+
+        @include breakpoint($bp-medium) {
+            display: grid;
+            grid-gap: 8rem;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 0;
+        }
+
+        @include breakpoint($bp-xlarge) {
+            display: grid;
+            grid-gap: 14rem;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 0;
+        }
+
+        .c-form {
+            margin-bottom: $u-spacer-std-default;
+        }
+    }
+
+    .c-print {
+        float: right;
+        margin-top: .5rem;
+    }
+}

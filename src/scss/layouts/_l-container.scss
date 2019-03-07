@@ -1,0 +1,28 @@
+.l-container {
+    margin: 0 auto;
+    padding: 0 $page-padding-x;
+
+    @include breakpoint($bp-medium) {
+        max-width: $page-max-width-medium;
+        padding: 0;
+    }
+
+    @include breakpoint($bp-xlarge) {
+        max-width: $page-max-width-large;
+    }
+
+    &--no-padding {
+        padding: 0;
+    }
+
+    &--page-builder {
+        margin: 0 auto;
+        padding: 0 $u-spacer-std-default;
+        position: relative;
+        width: 100%;
+
+        @include breakpoint($bp-xlarge) {
+            width: 120rem;
+        }
+    }
+}

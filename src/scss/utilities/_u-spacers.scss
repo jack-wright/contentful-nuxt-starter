@@ -1,0 +1,124 @@
+
+// fileoverview:
+// Breakpoint responsive utility margin classes.
+.u-m-none {
+    margin: 0;
+}
+
+.u-m-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+$u-margin-position-map: (
+    mb: margin-bottom,
+    mt: margin-top,
+    ml: margin-left,
+    mr: margin-right,
+);
+
+$u-padding-position-map: (
+    pb: padding-bottom,
+    pt: padding-top,
+    pl: padding-left,
+    pr: padding-right,
+);
+
+// Spacer size map
+// Position 1 default mobile first
+// Position 2 from breakpoint $bp-small
+// Position 3 from breakpoint $bp-medium
+$u-spacer-sizes-map: (
+    'sm': (
+        $u-spacer-sm-default,
+        $u-spacer-sm-small-up,
+        $u-spacer-sm-medium-up,
+    ),
+    'std': (
+        $u-spacer-std-default,
+        $u-spacer-std-small-up,
+        $u-spacer-std-medium-up,
+    ),
+    'lg': (
+        $u-spacer-lg-default,
+        $u-spacer-lg-small-up,
+        $u-spacer-lg-medium-up,
+    ),
+    'xl': (
+        $u-spacer-xl-default,
+        $u-spacer-xl-small-up,
+        $u-spacer-xl-medium-up,
+    ),
+);
+
+// Loop through each margin prop (margin-bottom, margin-top...) and create
+// a classname with with responsive margins at each breakpoint.
+//
+// Example output:
+//
+// .u-mb-std {
+//   margin-bottom: 3rem;
+// }
+//
+// @media screen and (min-width: 540px) {
+//   .u-mb-std {
+//     margin-bottom: 4rem;
+//   }
+// }
+//
+// @media screen and (min-width: 768px) {
+//   .u-mb-std {
+//     margin-bottom: 6rem;
+//   }
+// }
+@each $margin-name, $margin-sizes in $u-spacer-sizes-map {
+    @each $margin-alias, $margin-property in $u-margin-position-map {
+        .u-#{$margin-alias}-#{$margin-name} {
+            #{$margin-property}: nth($margin-sizes, 1);
+
+            @include breakpoint($bp-small) {
+                #{$margin-property}: nth($margin-sizes, 2);
+            }
+
+            @include breakpoint($bp-medium) {
+                #{$margin-property}: nth($margin-sizes, 3);
+            }
+        }
+    }
+}
+
+// Loop through each padding prop (padding-bottom, padding-top...) and create
+// a classname with with responsive paddings at each breakpoint.
+//
+// Example output:
+//
+// .u-pb-std {
+//   padding-bottom: 3rem;
+// }
+//
+// @media screen and (min-width: 540px) {
+//   .u-pb-std {
+//     padding-bottom: 4rem;
+//   }
+// }
+//
+// @media screen and (min-width: 768px) {
+//   .u-pb-std {
+//     padding-bottom: 6rem;
+//   }
+// }
+@each $padding-name, $padding-sizes in $u-spacer-sizes-map {
+    @each $padding-alias, $padding-property in $u-padding-position-map {
+        .u-#{$padding-alias}-#{$padding-name} {
+            #{$padding-property}: nth($padding-sizes, 1);
+
+            @include breakpoint($bp-small) {
+                #{$padding-property}: nth($padding-sizes, 2);
+            }
+
+            @include breakpoint($bp-medium) {
+                #{$padding-property}: nth($padding-sizes, 3);
+            }
+        }
+    }
+}

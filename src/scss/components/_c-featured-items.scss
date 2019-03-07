@@ -1,0 +1,22 @@
+.c-featured-items {
+    &__heading {
+        font-weight: bold;
+    }
+
+    &__item-title {
+        font-weight: bold;
+    }
+
+    &__item-link {
+        @include link-text-color($post-title-link-color);
+    }
+
+    &__item-cta {
+        font-weight: bold;
+
+        &-icon {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+}

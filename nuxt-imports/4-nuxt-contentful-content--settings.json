@@ -1,0 +1,66 @@
+{
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ad3oup0x0clj"
+          }
+        },
+        "id": "6H1zj0gJ7UWw4kcAw86a2U",
+        "type": "Entry",
+        "createdAt": "2019-01-03T18:16:00.153Z",
+        "updatedAt": "2019-01-04T09:18:45.040Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Np4y2Qx3xK9w2GJOdyQMT"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Np4y2Qx3xK9w2GJOdyQMT"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Np4y2Qx3xK9w2GJOdyQMT"
+          }
+        },
+        "publishedVersion": 14,
+        "firstPublishedAt": "2019-01-03T18:16:03.823Z",
+        "publishedAt": "2019-01-04T09:18:45.040Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "settings"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Settings"
+        }
+      }
+    }
+  ],
+  "assets": [
+  ]
+}

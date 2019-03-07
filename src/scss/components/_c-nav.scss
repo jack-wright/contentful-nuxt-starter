@@ -1,0 +1,55 @@
+.c-nav {
+    $this: &;
+
+    display: flex;
+    width: auto;
+
+    &__menu {
+        align-items: center;
+        display: none;
+
+        @include breakpoint($bp-medium) {
+            display: flex;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__logo {
+        height: 2.5rem;
+        width: auto;
+
+        @include breakpoint($bp-medium) {
+            height: 3.5rem;
+        }
+    }
+
+    &__item {
+        margin: 0 1.6rem;
+
+        #{$this}__link {
+            &--active {
+                border-bottom: .1rem solid $text-color-light;
+
+                @include breakpoint($bp-medium) {
+                    border-bottom-width: .2rem;
+                }
+            }
+        }
+    }
+
+    &__brand {
+        margin-right: auto;
+    }
+
+    #{$this}__link {
+        color: $text-color-light;
+        text-decoration: none;
+
+        &:hover {
+            color: darken($text-color-light, 15%);
+        }
+    }
+}

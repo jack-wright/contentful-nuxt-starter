@@ -1,0 +1,27 @@
+.fade {
+    &-enter-active {
+        transition: opacity .3s;
+    }
+
+    &-enter,
+    &-leave-to {
+        opacity: 0;
+    }
+}
+
+// Enter and leave animations can use different
+// durations and timing functions.
+.slide-up-fade-enter-active {
+    transition: all $transition-long ease;
+}
+
+.slide-up-fade-leave-active {
+    transition: all $transition-long cubic-bezier(1, .5, .8, 1);
+}
+
+.slide-up-fade-enter,
+.slide-up-fade-leave-to {
+    //.slide-fade-leave-active below version 2.1.8
+    opacity: 0;
+    transform: translateY(1rem);
+}

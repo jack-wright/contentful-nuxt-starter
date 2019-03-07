@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    min-width: $page-min-width;
+
+    &.menu-is-open {
+        overflow: hidden;
+
+        @include breakpoint($bp-medium) {
+            overflow: auto;
+        }
+    }
+}

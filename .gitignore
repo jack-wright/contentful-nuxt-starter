@@ -1,0 +1,12 @@
+.env
+env.js
+.nuxt/
+.vagrant
+Vagrantfile
+node_modules/
+public/
+vendor/
+sw.*
+.DS_Store
+.vscode
+coverage

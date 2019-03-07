@@ -1,0 +1,70 @@
+.c-page {
+    $this: &;
+
+    &__brand-logo {
+        display: block;
+        margin: 0 auto;
+        width: 40%;
+
+        @include breakpoint($bp-medium) {
+            margin-bottom: 0;
+            width: 50%;
+        }
+
+        @include breakpoint($bp-large) {
+            margin-bottom: 2.4rem;
+            width: 75%;
+        }
+
+        @include breakpoint($bp-xlarge) {
+            margin-bottom: 3.2rem;
+            width: 100%;
+        }
+    }
+
+    &__introduction {
+        margin: 0 auto;
+        max-width: $introduction-max-width;
+        padding: 2.5rem;
+    }
+
+    &__heading {
+        color: $text-color-light;
+    }
+
+    &__section {
+        width: 100%;
+
+        &--colored {
+            background-color: $c-featured-section;
+            color: $c-white;
+
+            #{$this}__divider {
+                &::after {
+                    @include divider($c-white);
+                }
+            }
+
+            .u-button {
+                background-color: $c-white;
+
+                &:hover {
+                    background-color: $c-theme;
+                }
+            }
+        }
+    }
+
+    &__divider {
+        &::after {
+            @include divider;
+            bottom: 0;
+        }
+    }
+}
+
+@keyframes gradientChange {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

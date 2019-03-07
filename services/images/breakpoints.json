@@ -1,0 +1,192 @@
+{
+    "hero": {
+        "webp": {
+            "fullSize": {
+                "mediaQuery": "(min-width:1920px)",
+                "urlParams": "?fm=webp&w=2500",
+                "urlParamsRetina": "?fm=webp"
+            },
+            "large": {
+                "mediaQuery": "(min-width:1280px)",
+                "urlParams": "?fm=webp&w=1920",
+                "urlParamsRetina": "?fm=webp&w=3840"
+            },
+            "medium": {
+                "mediaQuery": "(min-width:768px)",
+                "urlParams": "?fm=webp&w=992",
+                "urlParamsRetina": "?fm=webp&w=1984"
+            },
+            "small": {
+                "mediaQuery": "(min-width:576px)",
+                "urlParams": "?fm=webp&w=768",
+                "urlParamsRetina": "?fm=webp&w=1536"
+            },
+            "xSmall": {
+                "mediaQuery": "(max-width:575px)",
+                "urlParams": "?fm=webp&w=575",
+                "urlParamsRetina": "?fm=webp&w=1150"
+            }
+        },
+
+        "fallback": {
+            "fullSize": {
+                "mediaQuery": "(min-width:1920px)",
+                "urlParams": "?w=2500",
+                "urlParamsRetina": ""
+            },
+            "large": {
+                "mediaQuery": "(min-width:1280px)",
+                "urlParams": "?w=1920",
+                "urlParamsRetina": "?w=3840"
+            },
+            "medium": {
+                "mediaQuery": "(min-width:768px)",
+                "urlParams": "?w=992",
+                "urlParamsRetina": "?w=1984"
+            },
+            "small": {
+                "mediaQuery": "(min-width:576px)",
+                "urlParams": "?w=768",
+                "urlParamsRetina": "?w=1536"
+            },
+            "xSmall": {
+                "mediaQuery": "(max-width:575px)",
+                "urlParams": "?w=575",
+                "urlParamsRetina": "?w=1150"
+            }
+        }
+    },
+
+    "thumbnail": {
+        "webp": {
+            "medium": {
+                "mediaQuery": "(min-width:768px)",
+                "urlParams": "?fm=webp&w=300",
+                "urlParamsRetina": "?fm=webp&w=600"
+            },
+            "small": {
+                "mediaQuery": "(min-width:576px)",
+                "urlParams": "?fm=webp&w=768",
+                "urlParamsRetina": "?fm=webp&w=1536"
+            },
+            "xSmall": {
+                "mediaQuery": "(max-width:575px)",
+                "urlParams": "?fm=webp&w=575",
+                "urlParamsRetina": "?fm=webp&w=1150"
+            }
+        },
+
+        "fallback": {
+            "medium": {
+                "mediaQuery": "(min-width:768px)",
+                "urlParams": "?w=300",
+                "urlParamsRetina": "?w=600"
+            },
+            "small": {
+                "mediaQuery": "(min-width:576px)",
+                "urlParams": "?w=768",
+                "urlParamsRetina": "?w=1536"
+            },
+            "xSmall": {
+                "mediaQuery": "(max-width:575px)",
+                "urlParams": "?w=575",
+                "urlParamsRetina": "?w=1150"
+            }
+        }
+    },
+
+    "postPreview": {
+        "webp": {
+            "large": {
+                "mediaQuery": "(min-width:1280px)",
+                "urlParams": "?fm=webp&w=390",
+                "urlParamsRetina": "?fm=webp&w=780"
+            },
+            "medium": {
+                "mediaQuery": "(min-width:768px)",
+                "urlParams": "?fm=webp&w=320",
+                "urlParamsRetina": "?fm=webp&w=640"
+            },
+            "small": {
+                "mediaQuery": "(min-width:576px)",
+                "urlParams": "?fm=webp&w=768",
+                "urlParamsRetina": "?fm=webp&w=1536"
+            },
+            "xSmall": {
+                "mediaQuery": "(max-width:575px)",
+                "urlParams": "?fm=webp&w=575",
+                "urlParamsRetina": "?fm=webp&w=1150"
+            }
+        },
+
+        "fallback": {
+            "large": {
+                "mediaQuery": "(min-width:1280px)",
+                "urlParams": "?w=390",
+                "urlParamsRetina": "?w=780"
+            },
+            "medium": {
+                "mediaQuery": "(min-width:768px)",
+                "urlParams": "?w=320",
+                "urlParamsRetina": "?w=640"
+            },
+            "small": {
+                "mediaQuery": "(min-width:576px)",
+                "urlParams": "?w=768",
+                "urlParamsRetina": "?w=1536"
+            },
+            "xSmall": {
+                "mediaQuery": "(max-width:575px)",
+                "urlParams": "?w=575",
+                "urlParamsRetina": "?w=1150"
+            }
+        }
+    },
+
+    "standard": {
+        "webp": {
+            "large": {
+                "mediaQuery": "(min-width:1280px)",
+                "urlParams": "?fm=webp&w=800",
+                "urlParamsRetina": "?fm=webp&w=1600"
+            },
+            "medium": {
+                "mediaQuery": "(min-width:768px)",
+                "urlParams": "?fm=webp&w=660",
+                "urlParamsRetina": "?fm=webp&w=1320"
+            },
+            "small": {
+                "mediaQuery": "(min-width:576px)",
+                "urlParams": "?fm=webp&w=767",
+                "urlParamsRetina": "?fm=webp&w=1534"
+            },
+            "xSmall": {
+                "mediaQuery": "(max-width:575px)",
+                "urlParams": "?fm=webp&w=575",
+                "urlParamsRetina": "?fm=webp&w=1150"
+            }
+        },
+        "fallback": {
+            "large": {
+                "mediaQuery": "(min-width:1280px)",
+                "urlParams": "?w=800",
+                "urlParamsRetina": "?w=1600"
+            },
+            "medium": {
+                "mediaQuery": "(min-width:768px)",
+                "urlParams": "?w=660",
+                "urlParamsRetina": "?w=1320"
+            },
+            "small": {
+                "mediaQuery": "(min-width:576px)",
+                "urlParams": "?w=767",
+                "urlParamsRetina": "?w=1534"
+            },
+            "xSmall": {
+                "mediaQuery": "(max-width:575px)",
+                "urlParams": "?w=575",
+                "urlParamsRetina": "?w=1150"
+            }
+        }
+    }
+}

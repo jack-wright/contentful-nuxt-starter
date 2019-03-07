@@ -1,0 +1,7 @@
+{
+    "query-entries": [
+        "content_type=defaultPage"
+    ],
+    "content-only": true,
+    "content-file": "./nuxt-imports/3-nuxt-contentful-content--default-page.json"
+}

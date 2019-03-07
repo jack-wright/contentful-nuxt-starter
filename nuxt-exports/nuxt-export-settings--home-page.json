@@ -1,0 +1,7 @@
+{
+    "query-entries": [
+        "content_type=homePage"
+    ],
+    "content-only": true,
+    "content-file": "./nuxt-imports/2-nuxt-contentful-content--home-page.json"
+}

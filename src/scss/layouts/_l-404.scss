@@ -1,0 +1,7 @@
+.l-404 {
+    min-height: 30rem;
+
+    @include breakpoint($bp-medium) {
+        min-height: 40rem;
+    }
+}

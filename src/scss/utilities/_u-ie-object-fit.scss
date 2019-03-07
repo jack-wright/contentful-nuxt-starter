@@ -1,0 +1,16 @@
+.u-ie-object-fit {
+    background-position: 25% 25%;
+    background-size: cover;
+
+    &::before {
+        background: transparent;
+    }
+
+    .c-image__img {
+        opacity: 0;
+    }
+
+    .c-image__loading-icon {
+        opacity: 0;
+    }
+}

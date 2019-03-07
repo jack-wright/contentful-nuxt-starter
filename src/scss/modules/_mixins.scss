@@ -1,0 +1,116 @@
+// Mixin for creating media queries
+@mixin breakpoint($min-width: null, $min-height: null, $medium: screen) {
+    @if ($min-width != null and $min-height != null) {
+        @media #{$medium} and (min-width: $min-width) and (min-height: $min-height) {
+            @content
+        }
+    } @else if ($min-width != null and $min-height == null) {
+        @media #{$medium} and (min-width: $min-width) {
+            @content
+        }
+    } @else if ($min-width == null and $min-height != null) {
+        @media #{$medium} and (min-height: $min-height) {
+            @content
+        }
+    }
+}
+
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+@mixin list-unstyled {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@mixin list-inline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: inline-block;
+    }
+}
+
+@mixin list-inline-floated {
+    @include clearfix;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        float: left;
+    }
+}
+
+@mixin square($val) {
+    height: #{$val};
+    width: #{$val};
+}
+
+@mixin circle($val) {
+    @include square($val);
+
+    border-radius: 50%;
+}
+
+@mixin link-text-color($val: $text-color-primary) {
+    color: $val;
+
+    &:hover {
+        color: $val;
+    }
+}
+
+@mixin absolute-center {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@mixin rotate($deg) {
+    transform: rotate($deg);
+}
+
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin text-contrast($n) {
+    $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+    $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+
+    @if abs($color-brightness) < ($light-color / 2) {
+        color: $text-color-light;
+    } @else {
+        color: $text-color-primary;
+    }
+}
+
+@mixin divider($color: $page-builder-divider-color) {
+    background-color: $color;
+    content: '';
+    height: $page-builder-divider-height;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}

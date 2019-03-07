@@ -1,0 +1,18 @@
+.c-print {
+    display: inline-flex;
+    cursor: pointer;
+
+    &__icon {
+        height: 2rem;
+        margin-right: 1rem;
+        width: 2rem;
+    }
+
+    &__title {
+        font-size: $font-size-sm;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
